@@ -32,7 +32,7 @@ export class Tab2Page {
     });
     cargando.present();
   }
-  ir_acerca_pagina(){
+  ir_acerca_pagina() {
     this.navCtrl.navigateForward(`/acerca-de-pagina`);
   }
   perfil_lm() {
@@ -41,7 +41,12 @@ export class Tab2Page {
   }
   enviar_busqueda() {
 
-    if (this.busqueda == "lionel messi") {
+    if (
+        this.busqueda=="lionel messi" || 
+        this.busqueda=="LIONEL MESSI" || 
+        this.busqueda=="Lionel messi" ||
+        this.busqueda=="messi" ||
+        this.busqueda=="Messi") {
       this.mostrar_cargando();
       this.navCtrl.navigateForward(`/leo-messi`);
     } else if (this.busqueda == "cristiano ronaldo") {
